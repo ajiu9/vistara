@@ -1,0 +1,49 @@
+{
+  "name": "components",
+  "type": "module",
+  "version": "0.0.1",
+  "description": "This is a component library",
+  "author": "ajiu9 <615944323@qq.com> (https://github.com/ajiu9)",
+  "licenses": "MIT",
+  "keywords": [
+    "vue",
+    "component",
+    "javaScript"
+  ],
+  "main": "index.js",
+  "engines": {
+    "node": ">=16.11.0"
+  },
+  "scripts": {
+    "build": "node scripts/build.js",
+    "lint": "eslint . --fix",
+    "release": "bumpp -r && pnpm -r publish --access public",
+    "clean": "rimraf packages/*/dist",
+    "prepare": "simple-git-hooks"
+  },
+  "devDependencies": {
+    "@ajiu9/eslint-config": "^1.0.3",
+    "@rollup/plugin-alias": "^5.1.0",
+    "@rollup/plugin-commonjs": "^26.0.1",
+    "@rollup/plugin-json": "^6.1.0",
+    "@rollup/plugin-node-resolve": "^15.2.3",
+    "@rollup/plugin-terser": "^0.4.4",
+    "bumpp": "^9.4.1",
+    "esbuild": "^0.23.0",
+    "eslint": "^9.6.0",
+    "execa": "^9.3.0",
+    "lint-staged": "^15.2.7",
+    "minimist": "^1.2.8",
+    "rollup": "^4.18.0",
+    "rollup-plugin-esbuild": "^6.1.1",
+    "rollup-plugin-polyfill-node": "^0.13.0",
+    "simple-git-hooks": "^2.11.1",
+    "typescript": "^5.5.3"
+  },
+  "simple-git-hooks": {
+    "pre-commit": "pnpm lint-staged"
+  },
+  "lint-staged": {
+    "*": "eslint --fix"
+  }
+}
