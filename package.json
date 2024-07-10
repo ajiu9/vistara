@@ -1,20 +1,27 @@
 {
+  "private": true,
+  "workspaces": [
+    "packages/*",
+    "play",
+    "docs"
+  ],
+  "peerDependencies": {
+    "vue": "^3.2.0"
+  },
   "name": "components",
   "type": "module",
-  "version": "0.0.1",
   "description": "This is a component library",
   "author": "ajiu9 <615944323@qq.com> (https://github.com/ajiu9)",
-  "licenses": "MIT",
   "keywords": [
     "vue",
     "component",
     "javaScript"
   ],
-  "main": "index.js",
   "engines": {
-    "node": ">=16.11.0"
+    "node": ">= 18"
   },
   "scripts": {
+    "cz": "czg",
     "build": "node scripts/build.js",
     "lint": "eslint . --fix",
     "release": "bumpp -r && pnpm -r publish --access public",
@@ -29,6 +36,8 @@
     "@rollup/plugin-node-resolve": "^15.2.3",
     "@rollup/plugin-terser": "^0.4.4",
     "bumpp": "^9.4.1",
+    "cz-git": "^1.9.3",
+    "czg": "^1.9.3",
     "esbuild": "^0.23.0",
     "eslint": "^9.6.0",
     "execa": "^9.3.0",
@@ -40,10 +49,15 @@
     "simple-git-hooks": "^2.11.1",
     "typescript": "^5.5.3"
   },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-git"
+    }
+  },
   "simple-git-hooks": {
     "pre-commit": "pnpm lint-staged"
   },
   "lint-staged": {
-    "*": "eslint --fix"
+    "*.{vue,js,ts,jsx,tsx,md,json}": "eslint --fix"
   }
 }
