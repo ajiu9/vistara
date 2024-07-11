@@ -8,8 +8,7 @@
   "peerDependencies": {
     "vue": "^3.2.0"
   },
-  "name": "components",
-  "type": "module",
+  "name": "vistara",
   "description": "This is a component library",
   "author": "ajiu9 <615944323@qq.com> (https://github.com/ajiu9)",
   "keywords": [
