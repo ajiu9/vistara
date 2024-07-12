@@ -7,6 +7,6 @@ export {}
 
 declare module '@vue/runtime-core' {
   export interface GlobalComponents {
-    ElDivider: typeof import('element-plus/es')['ElDivider']
+    ElDivider: typeof import('@vistara/components')['ElDivider']
   }
 }
