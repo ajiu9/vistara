@@ -24,6 +24,7 @@
     "dev": "pnpm -C play dev",
     "build": "node scripts/build.js",
     "lint": "eslint . --fix",
+    "gen:version": "tsx scripts/gen-version.ts",
     "release": "bumpp -r && pnpm -r publish --access public",
     "clean": "pnpm run clean:dist && pnpm run -r --parallel clean",
     "clean:dist": "rimraf dist",
