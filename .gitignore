@@ -1,6 +1,21 @@
-dist
-.DS_Store
-node_modules
-coverage
-*.log
+# Editor directories and files
 .idea
+
+# Package Manager
+node_modules
+.pnpm-debug.log*
+
+# System
+.DS_Store
+
+# Bundle
+dist
+coverage
+packages/vistara/version.ts
+
+# local env files
+*.local
+.eslintcache
+cypress/screenshots/*
+cypress/videos/*
+tmp
