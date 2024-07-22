@@ -3,10 +3,9 @@
     class="11111"
     role="separator"
   >
-  111111111111
     <div
     >
-    11111111111111
+    2
       <slot />
     </div>
   </div>
@@ -19,7 +18,7 @@
 // import type { CSSProperties } from 'vue'
 
 defineOptions({
-  name: 'ElDivider',
+  name: 'VDivider',
 })
 // const props = defineProps(dividerProps)
 // const ns = useNamespace('divider')
