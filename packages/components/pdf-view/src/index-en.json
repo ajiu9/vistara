@@ -1,7 +1,0 @@
-{
-	"contract": {
-		"min": "Zoomed to minimum",
-		"max": "Zoomed to maximum",
-		"err": "An exception occurred in contract generation"
-	}
-}
