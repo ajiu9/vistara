@@ -31,7 +31,8 @@
     "prepare": "simple-git-hooks"
   },
   "dependencies": {
-    "@vistara/components": "workspace:*"
+    "@vistara/components": "workspace:*",
+    "big.js": "^6.2.1"
   },
   "devDependencies": {
     "@ajiu9/eslint-config": "^1.0.3",

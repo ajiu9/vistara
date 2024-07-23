@@ -6,7 +6,7 @@ function kebabCase(key: string) {
 
 async function resolveComponent(name: string) {
   console.log('name: ', name)
-  if (!name.match(/^El[A-Z]/))
+  if (!name.match(/^V[A-Z]/))
     return
 
   return {

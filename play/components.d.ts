@@ -7,6 +7,9 @@ export {}
 
 declare module '@vue/runtime-core' {
   export interface GlobalComponents {
-    ElDivider: typeof import('@vistara/components')['ElDivider']
+    RouterLink: typeof import('vue-router')['RouterLink']
+    RouterView: typeof import('vue-router')['RouterView']
+    VDivider: typeof import('@vistara/components')['VDivider']
+    VPdfView: typeof import('@vistara/components')['VPdfView']
   }
 }
