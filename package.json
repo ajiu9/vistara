@@ -8,6 +8,7 @@
   "peerDependencies": {
     "vue": "^3.2.0"
   },
+  "type": "module",
   "name": "vistara",
   "description": "This is a component library",
   "author": "ajiu9 <615944323@qq.com> (https://github.com/ajiu9)",
@@ -22,12 +23,13 @@
   "scripts": {
     "cz": "czg",
     "dev": "pnpm -C play dev",
-    "build": "node scripts/build.js",
     "lint": "eslint . --fix",
     "gen:version": "tsx scripts/gen-version.ts",
     "release": "bumpp -r && pnpm -r publish --access public",
     "clean": "pnpm run clean:dist && pnpm run -r --parallel clean",
     "clean:dist": "rimraf dist",
+    "build": "pnpm run -C internal/build start",
+    "docs:dev": "pnpm run -C docs dev",
     "prepare": "simple-git-hooks"
   },
   "dependencies": {

@@ -1,0 +1,24 @@
+{
+  "name": "@vistara/build",
+  "version": "0.0.1",
+  "private": true,
+  "description": "Build Toolchain for Vistara",
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.ts",
+  "scripts": {
+    "start": "gulp --required tsx -f gulpfile.ts",
+    "dev": "pnpm run stub",
+    "stub": "unbuild --stub"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "gulp": "^5.0.0"
+  },
+  "devDependencies": {
+    "@babel/register": "^7.24.6",
+    "ts-node": "^10.9.2"
+  }
+}
