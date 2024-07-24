@@ -8,7 +8,6 @@
   "peerDependencies": {
     "vue": "^3.2.0"
   },
-  "type": "module",
   "name": "vistara",
   "description": "This is a component library",
   "author": "ajiu9 <615944323@qq.com> (https://github.com/ajiu9)",
@@ -31,7 +30,8 @@
     "build": "pnpm run -C internal/build start",
     "docs:dev": "pnpm run -C docs dev",
     "prepare": "simple-git-hooks",
-    "stub": "pnpm run -r --parallel stub"
+    "stub": "pnpm run -r --parallel stub",
+    "postinstall": "pnpm run stub && concurrently \"pnpm gen:version\""
   },
   "dependencies": {
     "@vistara/components": "workspace:*",
@@ -45,10 +45,11 @@
     "@rollup/plugin-json": "^6.1.0",
     "@rollup/plugin-node-resolve": "^15.2.3",
     "@rollup/plugin-terser": "^0.4.4",
-    "@vistara/build-utils": "workspace:*",
+    "@vistara/build-utils": "workspace:^0.0.1",
     "@vitejs/plugin-vue": "^2.3.3",
     "@vitejs/plugin-vue-jsx": "^1.3.10",
     "bumpp": "^9.4.1",
+    "concurrently": "^8.2.2",
     "cz-git": "^1.9.3",
     "czg": "^1.9.3",
     "esbuild": "^0.23.0",

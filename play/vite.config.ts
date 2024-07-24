@@ -20,7 +20,6 @@ import {
 // import type { Plugin } from 'vite'
 // import './vite.init'
 
-
 const esbuildPlugin = (): Plugin => ({
   ...esbuild({
     target: 'chrome64',
