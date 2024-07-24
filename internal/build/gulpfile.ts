@@ -1,4 +1,8 @@
-const { series } = require('gulp');
+const { series } = require('gulp')
+console.log('gulpfile.ts')
+import { withTaskName, run } from './src/index'
+console.log('gulpfile.ts11')
+
 
 // The `clean` function is not exported so it can be considered a private task.
 // It can still be used within the `series()` composition.
@@ -12,9 +16,11 @@ function clean(cb) {
 // It can also be used within the `series()` composition.
 function build(cb) {
   console.log(' body omitted build')
+
   // body omitted
   cb();
 }
 
-exports.build = build;
-exports.default = series(clean, build);
+export default series(
+  withTaskName('clean', ()=> run('pnpm run clean'))
+)

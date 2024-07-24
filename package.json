@@ -30,7 +30,8 @@
     "clean:dist": "rimraf dist",
     "build": "pnpm run -C internal/build start",
     "docs:dev": "pnpm run -C docs dev",
-    "prepare": "simple-git-hooks"
+    "prepare": "simple-git-hooks",
+    "stub": "pnpm run -r --parallel stub"
   },
   "dependencies": {
     "@vistara/components": "workspace:*",

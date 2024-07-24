@@ -21,6 +21,7 @@ async function main() {
     path.resolve(vpRoot, 'version.ts'),
     `export const version = '${version}'\n`
   )
+  consola.success('Generate version.ts success!')
 }
 
 main()
