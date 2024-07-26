@@ -7,7 +7,7 @@
   "module": "./dist/index.mjs",
   "types": "./dist/index.d.ts",
   "scripts": {
-    "start": "gulp --required @esbuild-kit/cjs-loader -f gulpfile.ts",
+    "start": "gulp --preload @esbuild-kit/cjs-loader -f gulpfile.ts",
     "dev": "pnpm run stub",
     "stub": "unbuild --stub"
   },
@@ -17,8 +17,6 @@
     "gulp": "^5.0.0"
   },
   "devDependencies": {
-    "@babel/register": "^7.24.6",
-    "@esbuild-kit/cjs-loader": "^2.4.4",
-    "ts-node": "^10.9.2"
+    "@esbuild-kit/cjs-loader": "^2.4.4"
   }
 }

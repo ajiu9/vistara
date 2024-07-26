@@ -1,8 +1,7 @@
 import { writeFile } from 'fs/promises'
 import path from 'path'
 import consola from 'consola'
-import { projRoot } from '@vistara/build-utils'
-console.log('all', projRoot)
+import { vpRoot } from '@vistara/build-utils'
 import pkg from '../packages/vistara/package.json'
 
 function getVersion() {
@@ -19,7 +18,7 @@ const version = getVersion()
 async function main() {
   consola.info(`Version: ${version}`)
   await writeFile(
-    path.resolve(projRoot, 'version.ts'),
+    path.resolve(vpRoot, 'version.ts'),
     `export const version = '${version}'\n`
   )
   consola.success('Generate version.ts success!')

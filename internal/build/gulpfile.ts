@@ -1,7 +1,5 @@
 const { series } = require('gulp')
-console.log('gulpfile.ts')
-import { withTaskName, run } from './src/index'
-console.log('gulpfile.ts11')
+import { withTaskName, run } from './src'
 
 
 // The `clean` function is not exported so it can be considered a private task.
