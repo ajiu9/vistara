@@ -22,5 +22,5 @@ function build(cb) {
 
 export default series(
   withTaskName('clean', ()=> run('pnpm run clean')),
-  // withTaskName('buildOutput', ()=> mkdir(vpOutput, { recursive: true }))
+  withTaskName('buildOutput', ()=> mkdir(vpOutput, { recursive: true }))
 )
