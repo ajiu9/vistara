@@ -8,3 +8,7 @@ export const buildRoot = resolve(projRoot, 'internal', 'build')
 export const compPackage = resolve(compRoot, 'package.json')
 
 export const vpRoot = resolve(pkgRoot, 'vistara')
+
+/**dist */
+export const buildOutput = resolve(projRoot, 'dist')
+export const vpOutput = resolve(buildOutput, 'vistara')

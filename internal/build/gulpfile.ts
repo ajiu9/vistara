@@ -1,6 +1,7 @@
 const { series } = require('gulp')
+import { mkdir } from 'fs/promises';
 import { withTaskName, run } from './src'
-
+import { buildOutput, vpOutput } from '@vistara/build-utils'
 
 // The `clean` function is not exported so it can be considered a private task.
 // It can still be used within the `series()` composition.
@@ -20,5 +21,6 @@ function build(cb) {
 }
 
 export default series(
-  withTaskName('clean', ()=> run('pnpm run clean'))
+  withTaskName('clean', ()=> run('pnpm run clean')),
+  // withTaskName('buildOutput', ()=> mkdir(vpOutput, { recursive: true }))
 )
