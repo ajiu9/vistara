@@ -1,9 +1,12 @@
 import { defineConfig } from 'vitepress'
+import consola from 'consola'
+import type { UserConfig } from 'vitepress'
 
-// https://vitepress.dev/reference/site-config
-export default defineConfig({
-  title: "My Awesome Project",
-  description: "A VitePress Site",
+consola.debug(`DOC_ENV: ${process.env.DOC_ENV}`)
+
+const config: UserConfig = {
+  title: "Vistara",
+  description: "A Components library",
   themeConfig: {
     // https://vitepress.dev/reference/default-theme-config
     nav: [
@@ -22,7 +25,9 @@ export default defineConfig({
     ],
 
     socialLinks: [
-      { icon: 'github', link: 'https://github.com/vuejs/vitepress' }
+      { icon: 'github', link: 'https://github.com/ajiu9/vistara' }
     ]
   }
-})
+}
+
+export default config
