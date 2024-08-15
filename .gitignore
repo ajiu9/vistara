@@ -19,3 +19,4 @@ packages/vistara/version.ts
 cypress/screenshots/*
 cypress/videos/*
 tmp
+docs/.vitepress/cache
