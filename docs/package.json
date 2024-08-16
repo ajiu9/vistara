@@ -3,11 +3,11 @@
   "private": true,
   "scripts": {
     "dev": "vitepress dev .",
-    "docs:dev": "vitepress dev",
-    "docs:build": "vitepress build",
+    "build": "NODE_ENV=production && vitepress build .",
     "docs:preview": "vitepress preview"
   },
   "devDependencies": {
-    "vitepress": "^1.3.2"
+    "vitepress": "^1.3.2",
+    "@vistara/build-utils": "workspace:*"
   }
 }
