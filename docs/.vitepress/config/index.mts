@@ -2,6 +2,8 @@ import consola from 'consola'
 import type { UserConfig } from 'vitepress'
 import { languages } from '../utils/lang'
 import { nav } from './nav'
+import { head } from './head'
+
 
 consola.debug(`DOC_ENV: ${process.env.DOC_ENV}`)
 
@@ -16,6 +18,8 @@ languages.forEach((lang) => {
 const config: UserConfig = {
   title: "Vistara",
   description: "A Components library",
+  lastUpdated: true,
+  head,
   themeConfig: {
     // https://vitepress.dev/reference/default-theme-config
     nav,
@@ -25,20 +29,21 @@ const config: UserConfig = {
     // ],
 
     sidebar: [
-      {
-        text: 'Examples',
-        items: [
-          { text: 'Markdown Examples', link: '/markdown-examples' },
-          { text: 'Runtime API Examples', link: '/api-examples' }
-        ]
-      }
+      // {
+      //   text: 'Examples',
+      //   items: [
+      //     { text: 'Markdown Examples', link: '/markdown-examples' },
+      //     { text: 'Runtime API Examples', link: '/api-examples' }
+      //   ]
+      // }
     ],
-
     socialLinks: [
       { icon: 'github', link: 'https://github.com/ajiu9/vistara' }
     ]
   },
   vue: {}
 }
+
+console.log(config)
 
 export default config
