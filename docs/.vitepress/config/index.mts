@@ -1,11 +1,15 @@
 import consola from 'consola'
 import type { UserConfig } from 'vitepress'
 import { languages } from '../utils/lang'
-import { nav } from './nav'
 import { head } from './head'
 
 
 consola.debug(`DOC_ENV: ${process.env.DOC_ENV}`)
+
+const nav = [
+  { text: 'Guide', link: '/guide/introduction' },
+]
+
 
 const locales = {}
 languages.forEach((lang) => {
@@ -23,11 +27,9 @@ const config: UserConfig = {
   themeConfig: {
     // https://vitepress.dev/reference/default-theme-config
     nav,
-    // nav: [
-    //   { text: 'Home', link: '/' },
-    //   { text: 'Examples', link: '/markdown-examples' }
-    // ],
-
+    docsDir: 'docs',
+    editLinks: true,
+    editLinkText: 'Edit this page on GitHub',
     sidebar: [
       // {
       //   text: 'Examples',
