@@ -1,4 +1,3 @@
-
 function kebabCase(key: string) {
   const result = key.replace(/([A-Z])/g, ' $1').trim()
   return result.split(' ').join('-').toLowerCase()
@@ -22,6 +21,6 @@ export function VistaraResolver() {
       resolve: async (name: string) => {
         return await resolveComponent(name)
       },
-    }
-  ] 
+    },
+  ]
 }

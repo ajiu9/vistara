@@ -8,7 +8,8 @@ function getVersion() {
   const tagVer = process.env.TAG_VERSION
   if (tagVer) {
     return tagVer.startsWith('v') ? tagVer.slice(1) : tagVer
-  } else {
+  }
+  else {
     return pkg.version
   }
 }
@@ -19,7 +20,7 @@ async function main() {
   consola.info(`Version: ${version}`)
   await writeFile(
     path.resolve(vpRoot, 'version.ts'),
-    `export const version = '${version}'\n`
+    `export const version = '${version}'\n`,
   )
   consola.success('Generate version.ts success!')
 }

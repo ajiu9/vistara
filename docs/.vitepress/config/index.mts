@@ -3,13 +3,11 @@ import type { UserConfig } from 'vitepress'
 import { languages } from '../utils/lang'
 import { head } from './head'
 
-
 consola.debug(`DOC_ENV: ${process.env.DOC_ENV}`)
 
 const nav = [
   { text: 'Guide', link: '/guide/introduction' },
 ]
-
 
 const locales = {}
 languages.forEach((lang) => {
@@ -20,8 +18,8 @@ languages.forEach((lang) => {
 })
 
 const config: UserConfig = {
-  title: "Vistara",
-  description: "A Components library",
+  title: 'Vistara',
+  description: 'A Components library',
   lastUpdated: true,
   head,
   themeConfig: {
@@ -40,10 +38,10 @@ const config: UserConfig = {
       // }
     ],
     socialLinks: [
-      { icon: 'github', link: 'https://github.com/ajiu9/vistara' }
-    ]
+      { icon: 'github', link: 'https://github.com/ajiu9/vistara' },
+    ],
   },
-  vue: {}
+  vue: {},
 }
 
 console.log(config)

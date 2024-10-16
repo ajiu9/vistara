@@ -1,6 +1,8 @@
 import { createApp } from 'vue'
 
-;(async () => {
+;
+
+(async () => {
   const apps = import.meta.glob('./src/*.vue')
   console.log('apps:', apps)
 

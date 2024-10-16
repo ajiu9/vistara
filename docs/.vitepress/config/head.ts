@@ -1,6 +1,6 @@
 import type { HeadConfig } from 'vitepress'
 
-export const head: HeadConfig []= [
+export const head: HeadConfig [] = [
   [
     'link',
     {

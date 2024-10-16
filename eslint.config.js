@@ -1,8 +1,5 @@
-export default [
-  {
-    rules: {
-        semi: "error",
-        "prefer-const": "error"
-    }
-}
-];
+import { ajiu9 } from '@ajiu9/eslint-config'
+
+export default ajiu9({
+  isTypeAware: false,
+})

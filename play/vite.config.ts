@@ -14,8 +14,6 @@ import {
   compRoot,
   // epRoot,
   getPackageDependencies,
-  pkgRoot,
-  projRoot,
 } from '@vistara/build-utils'
 // import type { Plugin } from 'vite'
 // import './vite.init'
@@ -33,7 +31,7 @@ const esbuildPlugin = (): Plugin => ({
 export default defineConfig(async ({ mode }) => {
   const env = loadEnv(mode, process.cwd(), '')
   let { dependencies } = getPackageDependencies(compPackage)
-  dependencies = dependencies.filter((dep) => !dep.startsWith('@types/')) // exclude dts deps
+  dependencies = dependencies.filter(dep => !dep.startsWith('@types/')) // exclude dts deps
   // const optimizeDeps = (
   //   await glob(['dayjs/(locale|plugin)/*.js'], {
   //     cwd: path.resolve(projRoot, 'node_modules'),

@@ -9,11 +9,11 @@ export const compPackage = resolve(compRoot, 'package.json')
 
 export const vpRoot = resolve(pkgRoot, 'vistara')
 
-/**docs */
+/** docs */
 export const docsDirName = 'docs'
 export const docRoot = resolve(projRoot, docsDirName)
 export const vitepressRoot = resolve(docRoot, '.vitepress')
 
-/**dist */
+/** dist */
 export const buildOutput = resolve(projRoot, 'dist')
 export const vpOutput = resolve(buildOutput, 'vistara')
