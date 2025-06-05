@@ -1,5 +1,5 @@
 {
-  "name": "@vistara/utils",
+  "name": "vistara-utils",
   "private": true,
   "license": "MIT",
   "main": "index.ts",

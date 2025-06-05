@@ -1,4 +1,4 @@
-import { buildRoot } from '@vistara/build-utils'
+import { buildRoot } from 'vistara-build-utils'
 
 import { run } from './process'
 import type { TaskFunction } from 'gulp'

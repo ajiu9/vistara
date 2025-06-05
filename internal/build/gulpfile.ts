@@ -1,6 +1,6 @@
 import { mkdir } from 'fs/promises'
 import { withTaskName, run, runTask, buildModules } from './src'
-import { vpOutput } from '@vistara/build-utils'
+import { vpOutput } from 'vistara-build-utils'
 
 const { series, parallel } = require('gulp')
 

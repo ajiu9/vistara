@@ -7,12 +7,12 @@ export const buildRoot = resolve(projRoot, 'internal', 'build')
 
 export const compPackage = resolve(compRoot, 'package.json')
 
-export const vpRoot = resolve(pkgRoot, 'vistara')
+export const vtRoot = resolve(pkgRoot, 'vistara')
 
 /** docs */
 export const docsDirName = 'docs'
 export const docRoot = resolve(projRoot, docsDirName)
-export const vitepressRoot = resolve(docRoot, '.vitepress')
+export const vpRoot = resolve(docRoot, '.vitepress')
 
 /** dist */
 export const buildOutput = resolve(projRoot, 'dist')

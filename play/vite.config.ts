@@ -9,12 +9,13 @@ import mkcert from 'vite-plugin-mkcert'
 // import glob from 'fast-glob'
 import VueMacros from 'unplugin-vue-macros/vite'
 import esbuild from 'rollup-plugin-esbuild'
+import process from 'process'
 import {
   compPackage,
   compRoot,
   // epRoot,
   getPackageDependencies,
-} from '@vistara/build-utils'
+} from 'vistara-build-utils'
 // import type { Plugin } from 'vite'
 // import './vite.init'
 
@@ -48,7 +49,7 @@ export default defineConfig(async ({ mode }) => {
     // },
     resolve: {
       alias: {
-        '@vistara/components': path.resolve(compRoot, 'index.ts'),
+        'vistara-components': path.resolve(compRoot, 'index.ts'),
       },
       // alias: [
       //   {
@@ -79,7 +80,7 @@ export default defineConfig(async ({ mode }) => {
       }),
       esbuildPlugin(),
       Components({
-        include: `${__dirname}/**`,
+        include: path.resolve(__dirname, '**'),
         resolvers: VistaraResolver(),
         dts: true,
       }),

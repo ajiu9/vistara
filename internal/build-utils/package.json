@@ -1,5 +1,5 @@
 {
-  "name": "@vistara/build-utils",
+  "name": "vistara-build-utils",
   "version": "0.0.1",
   "private": true,
   "description": "Build utils for Element Plus",
