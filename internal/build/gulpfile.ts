@@ -1,6 +1,6 @@
 import { mkdir } from 'fs/promises'
 import { withTaskName, run, runTask, buildModules } from './src'
-import { vpOutput } from 'vistara-build-utils'
+import { vtOutput } from 'vistara-build-utils'
 
 const { series, parallel } = require('gulp')
 
@@ -25,7 +25,7 @@ export function build(cb) {
 
 export default series(
   withTaskName('clean', () => run('pnpm run clean')),
-  withTaskName('buildOutput', () => mkdir(vpOutput, { recursive: true })),
+  withTaskName('buildOutput', () => mkdir(vtOutput, { recursive: true })),
   runTask('build'),
   // parallel(
   //   runTask('buildModules')
