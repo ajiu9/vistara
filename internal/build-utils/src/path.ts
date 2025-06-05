@@ -16,4 +16,4 @@ export const vpRoot = resolve(docRoot, '.vitepress')
 
 /** dist */
 export const buildOutput = resolve(projRoot, 'dist')
-export const vpOutput = resolve(buildOutput, 'vistara')
+export const vtOutput = resolve(buildOutput, 'vistara')
