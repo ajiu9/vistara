@@ -22,11 +22,12 @@ export function build(cb) {
   // body omitted
   cb()
 }
+console.log('vtOutput: ', vtOutput)
 
 export default series(
   withTaskName('clean', () => run('pnpm run clean')),
   withTaskName('buildOutput', () => mkdir(vtOutput, { recursive: true })),
-  runTask('build'),
+  // runTask('build'),
   // parallel(
   //   runTask('buildModules')
   // )

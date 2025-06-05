@@ -1,11 +1,10 @@
-/* eslint-disable no-new */
 import { spawn } from 'child_process'
 import chalk from 'chalk'
 import consola from 'consola'
 import { projRoot } from 'vistara-build-utils'
 import process from 'process'
 
-export const run = async (command: string, cwd: string = projRoot) => {
+export const run = async (command: string, cwd: string = projRoot) =>
   new Promise<void>((resolve, reject) => {
     const [cmd, ...args] = command.split(' ')
     consola.info(`run: ${chalk.green(`${cmd} ${args.join(' ')}`)}`)
@@ -14,7 +13,9 @@ export const run = async (command: string, cwd: string = projRoot) => {
       stdio: 'inherit',
       shell: process.platform === 'win32',
     })
+
     const onProcessExit = () => app.kill('SIGHUP')
+
     app.on('close', (code) => {
       process.removeListener('exit', onProcessExit)
 
@@ -26,4 +27,3 @@ export const run = async (command: string, cwd: string = projRoot) => {
     })
     process.on('exit', onProcessExit)
   })
-}
