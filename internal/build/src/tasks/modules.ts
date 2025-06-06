@@ -1,4 +1,6 @@
 // import { rollup } from 'rollup'
+import { series } from 'gulp'
+import type { TaskFunction } from 'gulp'
 // import vue from '@vitejs/plugin-vue'
 // import vueJsx from '@vitejs/plugin-vue-jsx'
 // import VueMacros from 'unplugin-vue-macros/rollup'
@@ -7,7 +9,7 @@
 // import esbuild from 'rollup-plugin-esbuild'
 // import glob from 'fast-glob'
 // import { epRoot, excludeFiles, pkgRoot } from '@element-plus/build-utils'
-// import { generateExternal, writeBundles } from '../utils'
+import { withTaskName } from '../utils'
 // import { ElementPlusAlias } from '../plugins/element-plus-alias'
 // import { buildConfigEntries, target } from '../build-info'
 
@@ -66,6 +68,12 @@
 //   )
 // }
 
-export const buildModules = () => {
-  console.log(' body omitted buildModules')
+async function buildModulesComponents() {
+  // Placeholder for the actual implementation of building modules components
+  // Here you would add the logic to build your modules components
+  // For example, you might call a bundler or a compiler here
 }
+
+export const buildModules: TaskFunction = series(
+  withTaskName('buildModulesComponents', buildModulesComponents),
+)
