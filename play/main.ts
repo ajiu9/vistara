@@ -1,11 +1,14 @@
+import type { Component } from 'vue'
 import { createApp } from 'vue'
 
 ;
 
 (async () => {
-  const apps = import.meta.glob('./src/*.vue')
-  console.log('apps:', apps)
-
+  const apps = import.meta.glob<
+    true,
+    string,
+    () => Promise<{ default: Component }>
+  >('./src/*.vue')
   const name = location.pathname.replace(/^\//, '') || 'App'
   const file = apps[`./src/${name}.vue`]
   if (!file) {
