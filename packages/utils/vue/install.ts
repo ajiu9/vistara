@@ -5,9 +5,8 @@ export const withInstall = <T, E extends Record<string, any>>(
   extra?: E,
 ) => {
   ;(main as SFCWithInstall<T>).install = (app): void => {
-    for (const comp of [main, ...Object.values(extra ?? {})]) {
+    for (const comp of [main, ...Object.values(extra ?? {})])
       app.component(comp.name, comp)
-    }
   }
 
   if (extra) {
