@@ -1,4 +1,4 @@
-import { withInstall } from '@vistara/utils'
+import { withInstall } from 'vistara-utils'
 
 import Divider from './src/divider.vue'
 

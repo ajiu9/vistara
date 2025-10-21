@@ -1,21 +1,20 @@
 import path from 'path'
-import { defineConfig, loadEnv } from 'vite'
+import process from 'process'
 import vue from '@vitejs/plugin-vue'
 import vueJsx from '@vitejs/plugin-vue-jsx'
+import esbuild from 'rollup-plugin-esbuild'
 import Components from 'unplugin-vue-components/vite'
-import { VistaraResolver } from './resolver'
+import { defineConfig, loadEnv } from 'vite'
 import Inspect from 'vite-plugin-inspect'
 import mkcert from 'vite-plugin-mkcert'
+import { VistaraResolver } from './resolver'
 // import glob from 'fast-glob'
 import VueMacros from 'unplugin-vue-macros/vite'
-import esbuild from 'rollup-plugin-esbuild'
-import process from 'process'
-import {
-  compPackage,
-  compRoot,
-  // epRoot,
-  getPackageDependencies,
-} from 'vistara-build-utils'
+// 使用默认导入替代命名导入
+import utils from 'vistara-build-utils'
+
+// 从默认导入的对象中解构需要的属性和方法
+const { compPackage, compRoot, getPackageDependencies } = utils
 // import type { Plugin } from 'vite'
 // import './vite.init'
 
@@ -63,8 +62,9 @@ export default defineConfig(async ({ mode }) => {
       // ],
     },
     server: {
+      port: 3000,
       host: true,
-      https: !!env.HTTPS,
+      https: env.HTTPS ? {} : false,
     },
     build: {
       sourcemap: true,

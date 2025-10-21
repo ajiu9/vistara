@@ -37,7 +37,9 @@
   },
   "dependencies": {
     "big.js": "^6.2.1",
-    "vistara-components": "workspace:*"
+    "vistara-components": "workspace:*",
+    "vistara-utils": "workspace:*"
+
   },
   "devDependencies": {
     "@ajiu9/eslint-config": "2.5.3",

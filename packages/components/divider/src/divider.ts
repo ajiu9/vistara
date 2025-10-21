@@ -1,6 +1,6 @@
-import { buildProps, definePropType } from '@vistara/utils'
 import type { ExtractPropTypes } from 'vue'
 import type Divider from './divider.vue'
+import { buildProps, definePropType } from 'vistara-utils'
 
 export type BorderStyle = CSSStyleDeclaration['borderStyle']
 

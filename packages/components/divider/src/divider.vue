@@ -1,16 +1,3 @@
-<template>
-  <div
-    class="11111"
-    role="separator"
-  >
-    <div
-    >
-    2
-      <slot />
-    </div>
-  </div>
-</template>
-
 <script lang="ts" setup>
 // import { computed } from 'vue'
 // import { useNamespace } from '@element-plus/hooks'
@@ -28,3 +15,15 @@ defineOptions({
 //   }) as CSSProperties
 // })
 </script>
+
+<template>
+  <div
+    class="11111"
+    role="separator"
+  >
+    <div>
+      2
+      <slot />
+    </div>
+  </div>
+</template>

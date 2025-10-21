@@ -1,6 +1,5 @@
 import type { Component } from 'vue'
 import { createApp } from 'vue'
-
 ;
 
 (async () => {
