@@ -9,6 +9,7 @@ declare module 'vue' {
   export interface GlobalComponents {
     RouterLink: typeof import('vue-router')['RouterLink']
     RouterView: typeof import('vue-router')['RouterView']
+    VBox: typeof import('vistara-components')['VBox']
     VCarousel: typeof import('vistara-components')['VCarousel']
     VDivider: typeof import('vistara-components')['VDivider']
     VPdfView: typeof import('vistara-components')['VPdfView']

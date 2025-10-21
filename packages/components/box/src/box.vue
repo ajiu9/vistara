@@ -2,5 +2,5 @@
 </script>
 
 <template>
-  <div>carousel</div>
+  <div>box</div>
 </template>
